@@ -1,5 +1,5 @@
 <launch>
 <!-- send urdf to param server -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(pkg myrobot)/urdf/my_robot.xacro'"/>
+  <param name="robot_description" command="xacro --inorder '/home/robond/catkin_ws/src/my_robot/urdf/my_robot.xacro'"/>
 
 </launch>
