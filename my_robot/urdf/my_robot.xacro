@@ -173,7 +173,7 @@
 
     <joint name="hokuyo_joint" type="fixed">
 
-        <origin xyz="0.15 0.0 0.1" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.15 0.0 0.15  " rpy="0.0 0.0 0.0"/>
         <axis xyz="0.0 1.0 0.0"/>   
         <parent link="chassis"/>
         <child link="hokuyo"/>
@@ -189,14 +189,14 @@
         </inertial>
 
         <visual>
-            <origin xyz="0.2 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <box size="0.05 0.05 0.05"/>
             </geometry>
         </visual>
 
         <collision>
-            <origin xyz="0.2 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <box size="0.05 0.05 0.05"/>
             </geometry>
@@ -217,6 +217,15 @@
         <material>Gazebo/Grey</material>
     </gazebo>
 
+    <joint name="camera_optical_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="-1.5707 0.0 -1.5707"/>
+        <parent link="camera"/>
+        <child link="camera_link_optical"/>
+    </joint>
+
+    <link name="camera_link_optical">
+    </link>   
+     
     <gazebo reference="chassis">
         <material>Gazebo/Orange</material>
     </gazebo>
